@@ -1,4 +1,6 @@
 # startup
+
+```
 Repository for my cs260 project
 
 STARTUP SPECS:
@@ -45,3 +47,4 @@ Technologies:
 	- React:
 		- Application ported to use the React web framework
 
+```
