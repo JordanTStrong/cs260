@@ -14,7 +14,17 @@ refer to so you could save yourself from listing all your groceries for each vis
 only have to list out your groceries once! Then, let Prept do the tedious work of remembering your 
 purchases. Oh, and did we mention you can do it all via barcode scanning?
 
+```
 
+![Spec Design](startup_spec_design.jpeg)
+
+```
+Here is a sequence diagram:
+
+```
+![Sequence Diagram](startup_spec_sequence_diagram.jpeg)
+
+```
 Key Features:
 	- Secure login over HTTPS
 	- Ability to create profile
