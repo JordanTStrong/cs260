@@ -9,3 +9,12 @@ many times did you find yourself wishing you had a list on your phone you could 
 refer to so you could save yourself from listing all your groceries for each visit? With Prept, you 
 only have to list out your groceries once! Then, let Prept do the tedious work of remembering your 
 purchases. Oh, and did we mention you can do it all via barcode scanning?
+
+
+Key Features:
+	- Secure login over HTTPS
+	- Ability to create profile
+	- Add items to a list (3 cols: item name, quantity, price)
+	- Display list
+	- Ability for a user to edit list
+	- List persistently stored
