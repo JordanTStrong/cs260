@@ -1,18 +1,17 @@
-```
 This is where my notes will go. 
 This assignment was actually really fun. I have used Git a little bit at work, but very infrequently, so it is fun to 
 have the chance to practice and gain experience with file manipulation within git. 
 
-KEY GIT COMMANDS:
+##KEY GIT COMMANDS:
 git pull -- pulls a branch
 git add -- 'stages' a change for commit
 git commit -m "message here" -- Commits the changes
 git push <branch-name> -- Pushes the changes to GitHub
 
 
-----------------------------------------------------------------------------------------------------------------------------
-						CLASS 5/11 -- CSS
-----------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------
+#						CLASS 5/11 -- CSS
+#----------------------------------------------------------------------------------------------------------------------------
 
 CSS is for styling
 ; separates statements 
@@ -56,9 +55,8 @@ RESPONSIVE, GRID, FLEX
 	3) inline
 	4) flex
 	5) grid
-```
+
 ![Display types](display_types_css.png)
-```
 Every webpage I make, be sure to include <meta name="viewport" /> 
 	This overrides any guessing done by the browser in terms of style
 
@@ -71,5 +69,3 @@ CLASSES
 	When I create a class in HTML, I reference that class with .className
 
 ----------------------------------------------------------------------------------------------------------------------------
-
-```
