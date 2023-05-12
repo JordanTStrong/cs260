@@ -3,6 +3,8 @@
 ```
 Repository for my cs260 project
 
+IMPORTANT: THE CODE FOR THE ACTUAL WEB APP IS CONTAINED IN THE ```startup_app``` DIRECTORY
+
 
 STARTUP SPECS:
 

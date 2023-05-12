@@ -1,1 +1,48 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- Take control of viewport scaling from websites auto settings-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Prept </title>
+    </head>
+    <body>
+        <!-- In this section, use header, main, and footer elements to give semantic structure-->
+        <header>
+            <h1>Prept</h1>
+
+            <!-- Nav elements-->
+            <nav>
+                <!-- menu is a semantic alternative to <ul> that represents an interaction -->
+                <menu>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="list.html">List</a></li>
+                    <li><a href="add.html">Add Item</a></li>
+                </menu>        
+            </nav>
+
+            <!-- This next section is old style HTML to give visual formatting -->
+            <hr />
+        </header>
+
+        <main>
+            <h1>Let's get Prept</h1>
+            <p>Login to get Prept</p>
+            <form method="get" action="login.html">
+                <label for="name">Username</label>
+                <input type="text" id="name" placeholder="Enter username here" />
+                <button type="submit">Login</button>
+            </form>
+        </main>
+
+        <footer>
+            <hr />
+            <!-- <span> is used here to override any modifications that would otherwise 
+                be applied to Author Name(s) as a footer text-->
+            <span class="text-reset">Author Name(s)</span>
+            <br />    
+            <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
+        </footer>
+    </body>    
+</html>
