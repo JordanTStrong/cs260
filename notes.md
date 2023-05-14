@@ -69,3 +69,7 @@ CLASSES
 	When I create a class in HTML, I reference that class with .className
 
 ----------------------------------------------------------------------------------------------------------------------------
+
+
+** **#GOOD TO REMEMBER:
+It's the nested div element that creates a new paragraph when using grids, not the <p>> element. The <p> element behaves the same regardless of if inside of grids or not
