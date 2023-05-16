@@ -1,1 +1,1 @@
-This directory contains the subdirectories for my html, css, and javascript files
+This directory contains all the files for my app
