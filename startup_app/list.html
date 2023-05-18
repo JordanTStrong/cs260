@@ -12,19 +12,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title> Prept </title>
     </head>
+
     <body>
         <!-- In this section, use header, main, and footer elements to give semantic structure-->
         <header>
-            <h1>Prept</h1>
             <!-- I want this to be displayed as a banner image-->
-            <a href="https://www.eatwell101.com/wp-content/uploads/2012/02/A-Beginner%E2%80%99s-Shopping-List.jpg">stock image</a>
+            <div class="image">
+                <h1>Prept</h1>
+            </div>
             <h2>Username here</h2>
             <!-- Nav elements-->
             <nav>
                 <!-- menu is a semantic alternative to <ul> that represents an interaction -->
                 <menu>
-                    <li><a href="index.html">Logout </a></li>
-                    <li><a href="add.html">Add Item</a></li>
+                    <button><a href="add.html">Add Item</a></button>
+                    <button><a href="index.html">Logout </a></button>
                 </menu>        
             </nav>
 
