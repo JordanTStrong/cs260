@@ -73,3 +73,41 @@ CLASSES
 
 ** **#GOOD TO REMEMBER:
 It's the nested div element that creates a new paragraph when using grids, not the <p>> element. The <p> element behaves the same regardless of if inside of grids or not
+
+
+
+
+
+
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+#                                               CLASS 5/16 -- JavaScript
+#----------------------------------------------------------------------------------------------------------------------------
+
+
+1+1 is valid JS. Even just 1 is valid. 'Hello world' is valid.
+
+Chrome took over because their JS execution was so fast (developed JS interpreter called V8)
+
+Playgrounds:
+- CodePen
+- VSCpde (LiveServer)
+- Node.js
+
+consol.log('hello' + ' ' + 'world') <- console.log() prints out to console
+Arrays have same funcitonality as python
+	const words = ['hello', 'world'];
+	words.forEach((word) => {		<-- function that prints out all contents of words array
+	   console.log(word);
+	});
+
+
+How to access JS in html file:
+	script file
+	script tag		<- See class notes for examples of each of these	
+	script attribute
+
+closures are functions that are fixed in a single state
+
