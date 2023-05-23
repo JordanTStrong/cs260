@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8"/>
+    <!-- Take control of viewport scaling from websites auto settings-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Prept </title>
+</head>
+<body>
+    <main>
+        <h1>Let's get Prept!</h1>
+        <form method="get" action="list.html">
+            <label for="name">Username</label>
+            <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
+            <input type="text" id="name" name="username" color="black" placeholder="Enter username here" />
+            <button type="submit">Login</button>
+        </form>
 
-    <head>
-        <link rel="stylesheet" href="index.css">
+        <p>
+            <link rel="stylesheet" href="path/to/your/cssfile.css">
+        </p>
+    </main>
 
-        <meta charset="UTF-8"/>
-        <!-- Take control of viewport scaling from websites auto settings-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> Prept </title>
-    </head>
-    <body>
-        <main>
-            <h1>Let's get Prept!</h1>
-            </main>
-            <form method="get" action="list.html">
-                <label for="name">Username</label>
-                <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
-                <input type="text" id="name" name="username" placeholder="Enter username here" />
-                <button type="submit">Login</button>
-            </form>
-
-
-            <p>
-                <link rel="stylesheet" href="path/to/your/cssfile.css">
-            </p>
-        </main>
-
-        <footer>
-            <hr />
-            <!-- <span> is used here to override any modifications that would otherwise 
-                be applied to Author Name(s) as a footer text-->
-            <span class="text-reset">Author Name(s)</span>
-            
-
-            <br />    
-            <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
-        </footer>
-    </body>    
+    <footer>
+        <hr />
+        <!-- <span> is used here to override any modifications that would otherwise 
+            be applied to Author Name(s) as a footer text-->
+        <span class="text-reset">Author Name(s)</span>
+        <br />    
+        <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
+    </footer>
+</body>    
 </html>

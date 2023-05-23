@@ -1,76 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <link rel="stylesheet" href="index.css">
+<head>
+    <link rel="stylesheet" href="index.css">
 
-        <meta charset="UTF-8"/>
-        <!-- Take control of viewport scaling from websites auto settings-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> Prept </title>
-    </head>
-    <body>
-        <!-- In this section, use header, main, and footer elements to give semantic structure-->
-        <header>
-            <h1>Prept</h1>
-            <!-- I want this to be displayed as a banner image-->
-            <a href="https://www.eatwell101.com/wp-content/uploads/2012/02/A-Beginner%E2%80%99s-Shopping-List.jpg">stock image</a>
-            <h2>Username here</h2>
-            <!-- Nav elements-->
-            <nav>
-                <!-- menu is a semantic alternative to <ul> that represents an interaction -->
-                <menu>
-                    <button><a href="add.html">Add Item</a></button>
-                    <button><a href="index.html">Logout </a></button>
-                </menu>        
-            </nav>
+    <meta charset="UTF-8" />
+    <!-- Take control of viewport scaling from websites auto settings-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Prept </title>
+</head>
 
-            <!-- This next section is old style HTML to give visual formatting -->
-            <hr />
-        </header>
+<body>
+    <!-- In this section, use header, main, and footer elements to give semantic structure-->
+    <header>
+        <h1>Prept</h1>
+        <!-- I want this to be displayed as a banner image-->
+        <a href="https://www.eatwell101.com/wp-content/uploads/2012/02/A-Beginner%E2%80%99s-Shopping-List.jpg">stock image</a>
+        <h2>Username here</h2>
+        <!-- Nav elements-->
+        <nav>
+            <!-- menu is a semantic alternative to <ul> that represents an interaction -->
+            <menu>
+                <button><a href="list.html">View List</a></button>
+                <button><a href="index.html">Logout </a></button>
+            </menu>
+        </nav>
 
-        <main>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <h3 class="grid-title">Item Name</h3>
-                    <form action="/submit" method="POST">
-                    <label for="name">Item Name</label>
-                    <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
-                    <input type="text" id="name" name="item name" placeholder="Enter item name here" />
-                    <button type="submit">Submit</button>
-                    </form>
-                </div>
-                <div class="grid-item">
-                    <h3 class="grid-title">Quantity</h3>
-                    <form action="/submit" method="POST">
-                    <label for="name">Quantity</label>
-                    <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
-                    <input type="text" id="name" name="quantity" placeholder="Enter qunatity of item here" />
-                    <button type="submit">Submit</button>
-                    </form>
+        <!-- This next section is old style HTML to give visual formatting -->
+        <hr />
+    </header>
 
-                </div>
-                <div class="grid-item">
-                    <h3 class="grid-title">Price</h3>
-                    <form action="/submit" method="POST">
-                    <label for="name">Price</label>
-                    <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
-                    <input type="text" id="name" name="cost" placeholder="Enter individual cost here" />
-                    <button type="submit">Submit</button>
-                    </form>
-                  
-                </div>
-                </div>
-            </div>  
-        </main>
+    <main>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3 class="grid-title">Item Name</h3>
+                <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
+                <input type="text" id="name" name="item name" placeholder="Enter item name here" />
+                <button type="submit">Submit</button>
+            </div>
 
-        <footer>
-            <hr />
-            <!-- <span> is used here to override any modifications that would otherwise 
-                be applied to Author Name(s) as a footer text-->
-            <span class="text-reset">Author Name(s)</span>
-            <br />    
-            <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
-        </footer>
-    </body>    
+            <div class="grid-item">
+                <h3 class="grid-title">Quantity</h3>
+                <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
+                <input type="text" id="name" name="quantity" placeholder="Enter quantity of item here" />
+                <button type="submit">Submit</button>
+            </div>
+
+            <div class="grid-item">
+                <h3 class="grid-title">Price</h3>
+                <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
+                <input type="text" id="name" name="cost" placeholder="Enter individual cost here" />
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr />
+        <!-- <span> is used here to override any modifications that would otherwise 
+            be applied to Author Name(s) as a footer text-->
+        <span class="text-reset">Author Name(s)</span>
+        <br />
+        <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
+    </footer>
+</body>
+
 </html>

@@ -65,3 +65,15 @@ Technologies:
 		- Application ported to use the React web framework
 
 ```
+
+
+## startup-css
+
+For this deliverable I properly styled the application into its final appearance
+
+- Header, footer, and main content body
+- Navigation elements - I made the anchor elements appear within button boxes
+- Responsive to window resizing - My app looks great on all window sizes and devices
+- Application elements - Used good contrast and whitespace
+- Application text content - Consistent fonts
+- Application images - Try not to cry at the beauty of this one 
