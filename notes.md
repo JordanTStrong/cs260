@@ -111,3 +111,96 @@ How to access JS in html file:
 
 closures are functions that are fixed in a single state
 
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+#                                               JavaScript
+#----------------------------------------------------------------------------------------------------------------------------
+
+Insert JS into HTML by:
+	a) directly including it in the HTML within <script> element
+	b) using the src attribute of script element to reference external JS file (src === #include or import)
+	```
+	<head>
+ 	   <script src="javascript.js"></script>
+	</head>
+	<body>
+  	   <button onclick="sayHello()">Say Hello</button>
+ 	   <button onclick="sayGoodbye()">Say Goodbye</button>
+  	   <script>
+    		function sayGoodbye() {
+      		alert('Goodbye');
+    	   	}
+  	   </script>
+	</body>
+ 	```
+
+Functions
+---------
+	
+	First class objects, meaning can be assigned name, passed as parameter, returned as a result, and referenced from an object or array anywhere in the script
+
+	Anonymous functions:
+		Allows for defining of functions inline without explicit function declaration or name
+		// Function that takes a function as a parameter
+		function doMath(operation, a, b) {
+  		   return operation(a, b);
+		}
+
+		// Anonymous function assigned to a variable
+		const add = function (a, b) {
+  		   return a + b;
+		};
+
+		console.log(doMath(add, 5, 3));
+		// OUTPUT: 8
+
+		// Anonymous function assigned to a parameter
+		console.log(
+  		   doMath(
+    		      function (a, b) {
+      			return a - b;
+    		      },
+    		      5,
+    		      3
+  		   )
+		);
+		// OUTPUT: 2
+	
+
+	Arrow Functions:
+		const a = [1, 2, 3, 4];
+
+		// standard function syntax
+		a.sort(function (v1, v2) {
+  		   return v1 - v2;
+		});
+
+		// arrow function syntax
+		a.sort((v1, v2) => v1 - v2);
+
+		Special rules for return values:
+			() => 3;
+			// RETURNS: 3
+
+			() => {
+  			   3;
+			};
+			// RETURNS: undefined
+
+			() => {
+  			   return 3;
+			};
+			// RETURNS: 3
+
+
+
+
+
+		this pointer:
+			arrow functions inherit the this pointer from scope of where it is created
+			This makes a closure
+				Closure allows functions to continue referencing its creation scope
+					Like passing by value
+
+	
