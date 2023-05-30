@@ -10,35 +10,6 @@
     <title> Prept </title>
 </head>
 
-<script>
-    // get the username from localStorage
-    var username = localStorage.getItem("username");
-
-    // set the username in the h2 tag
-    document.querySelector("h2").textContent = username;
-
-    // when the form is submitted
-    document.querySelector("form").addEventListener("submit", function(event) {
-        // prevent the form from being submitted
-        event.preventDefault();
-
-        // get the item name, quantity, and price from the input fields
-        var name = document.querySelector("input[name='item name']").value;
-        var quantity = document.querySelector("input[name='quantity']").value;
-        var price = document.querySelector("input[name='cost']").value;
-
-        // get the groceries from localStorage
-        var groceries = JSON.parse(localStorage.getItem("groceries")) || [];
-
-        // add the new grocery to the groceries
-        groceries.push({ name: name, quantity: quantity, price: price });
-
-        // store the groceries in localStorage
-        localStorage.setItem("groceries", JSON.stringify(groceries));
-    });
-</script>
-
-
 <body>
     <!-- In this section, use header, main, and footer elements to give semantic structure-->
     <header>
@@ -92,6 +63,34 @@
         <br />
         <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
     </footer>
+
+    <script>
+        // get the username from localStorage
+        var username = localStorage.getItem("username");
+    
+        // set the username in the h2 tag
+        document.querySelector("h2").textContent = username;
+    
+        // when the form is submitted
+        document.querySelector("form").addEventListener("submit", function(event) {
+            // prevent the form from being submitted
+            event.preventDefault();
+    
+            // get the item name, quantity, and price from the input fields
+            var name = document.querySelector("input[name='item name']").value;
+            var quantity = document.querySelector("input[name='quantity']").value;
+            var price = document.querySelector("input[name='cost']").value;
+    
+            // get the groceries from localStorage
+            var groceries = JSON.parse(localStorage.getItem("groceries")) || [];
+    
+            // add the new grocery to the groceries
+            groceries.push({ name: name, quantity: quantity, price: price });
+    
+            // store the groceries in localStorage
+            localStorage.setItem("groceries", JSON.stringify(groceries));
+        });
+    </script>
 </body>
 
 </html>
