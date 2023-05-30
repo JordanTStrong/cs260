@@ -9,5 +9,4 @@ TODO:
 		Need Item Name data entered in add.html to display in Item Name column in list.html
 		Need Quantity data entered in add.html to display in Quantity column in list.html
   		Need Price data entered in add.html to display in Price column in list.html
-	remove 'stock image' displaying
 	Change color of Prept to blue
