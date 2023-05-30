@@ -204,3 +204,89 @@ Functions
 					Like passing by value
 
 	
+
+JSON
+-----
+	JavaScript Object Notation
+	Sharing and storing data
+	Easily convertible to and from JS objects
+	JSON doc contains an object
+		Objects contain zero or more key val pairs
+			Key always a string, val one of these datatypes:
+				string
+				number 
+				boolean
+				array 
+				object ie {"a":1,"b":"crackford"}
+				null
+		
+
+JavaScript RegEx
+----------------
+	Textual pattern matchers
+		ie Find text in a string
+	const objRegex = new RegExp('ab*', 'i');
+	const literalRegex = /ab*/i;
+
+
+Rest and Spread
+---------------	
+	Rest
+		Essentially takes whatever arguments are passed in and creates an array out of them
+		Allows for writing of function to take an unknown num of parameters (technically called variadic functions)
+		function hasNumbers(test, ...numbers) {                   //  <-- this ... operator is the rest operator
+		   return numbers.some((i) => i === test);
+		}
+		
+		hasNumber(2, 1, 2, 3);
+		//RETURNS: true
+		
+	Spread
+		... syntax
+		Whenever I'm dealing with iterable sets (arrays, maps, etc), if I populate a new iterable set with previously declared iterable sets without using the spread operator, the elements
+			of the new iterable set will be the previous sets (ie newArray becomes an array of arrays)
+		If I declare the new iterable set using the spread operator, it will copy all of the elements of each of the previously declared iterable sets into the new set as the new set's elements.
+			ie If I declared a new array populated using spread of previously declared arrays, newArray will be a single array with elements === the elements of the old arrays
+
+
+Exceptions
+----------
+	 try {
+ 	   // normal execution code
+	} catch (err) {
+  	   // exception handling code
+	} finally {
+  	   // always called code
+	}
+	
+	Fallback pattern
+		Commonly implemented using exception handling
+		Used to ensure something always returns to the user, even if desired feature is temporarily unavailable
+
+
+Destructuring
+-------------
+	NOT the same as destructing
+	Process of pulling individual items out of existing structure, or removing the structure altogether
+	Can do this with arrays or objects
+	
+	ex:
+		const a = [1, 2, 4, 5];
+
+		// destructure the first two items from a, into the new variables b and c
+		const [b, c] = a;
+
+		console.log(b, c);
+		// OUTPUT: 1, 2
+		Note that even though it looks like you are declaring an array with the syntax on the left side of the expression, it is only specifying that you want to destructure those values out of the array.
+
+	Destructuring is done using the syntax of whatever structure I am destructuring (ie [a, b] = for arrays ; {a, b} = for maps
+
+
+Object and Classes
+------------------
+	Object represents collection of name val pairs, referred to as properties
+	Property name must be of type String or Symbol, but val can be of any type
+	Created with the new operator
+
+
