@@ -290,3 +290,14 @@ Object and Classes
 	Created with the new operator
 
 
+Scope
+-----
+	Global   --  Visible to all code
+	Module   --  Visible to all code running in a module
+	Function --  Visible within a function
+	Block    --  Visible within a block of code delimited by curly braces
+
+Modules
+-------
+	Must explicitly export the objects from one file and then import them into another file
+	
