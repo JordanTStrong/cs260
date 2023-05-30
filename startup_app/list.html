@@ -13,6 +13,35 @@
         <title> Prept </title>
     </head>
 
+    <script>
+        // get the username from localStorage
+        var username = localStorage.getItem("username");
+    
+        // set the username in the h2 tag
+        document.querySelector("h2").textContent = username;
+    
+        // get the groceries from localStorage
+        var groceries = JSON.parse(localStorage.getItem("groceries")) || [];
+    
+        // update the DOM with the groceries
+        groceries.forEach(function(grocery) {
+            // find the corresponding grid-item
+            var gridItem = document.querySelector(".grid-item." + grocery.name);
+    
+            // if the gridItem doesn't exist, create it
+            if (!gridItem) {
+                gridItem = document.createElement("div");
+                gridItem.classList.add("grid-item");
+                gridItem.classList.add(grocery.name);
+                document.querySelector(".grid-container").appendChild(gridItem);
+            }
+    
+            // set the content of the gridItem
+            gridItem.innerHTML = "<h3 class='grid-title'>" + grocery.name + "</h3><p class='grid-content'>" + grocery.quantity + "</p><p class='grid-content'>" + grocery.price + "</p>";
+        });
+    </script>
+    
+
     <body>
         <!-- In this section, use header, main, and footer elements to give semantic structure-->
         <header>
