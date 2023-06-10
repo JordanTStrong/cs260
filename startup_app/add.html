@@ -3,31 +3,23 @@
 
 <head>
     <link rel="stylesheet" href="index.css">
-
     <meta charset="UTF-8" />
     <!-- Take control of viewport scaling from websites auto settings-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Prept </title>
+    <title>Prept</title>
 </head>
 
 <body>
-    <!-- In this section, use header, main, and footer elements to give semantic structure-->
     <header>
         <h1>Prept</h1>
-        <div class="players">
-            User: <!-- getUSername function-->
-            <span class="player-name"></span>
-        </div>
-        <!-- Nav elements-->
+        <h2>User: <span class="player-name"></span></h2>
+
         <nav>
-            <!-- menu is a semantic alternative to <ul> that represents an interaction -->
             <menu>
                 <button><a href="list.html">View List</a></button>
-                <button><a href="index.html">Logout </a></button>
+                <button><a href="index.html">Logout</a></button>
             </menu>
         </nav>
-
-        <!-- This next section is old style HTML to give visual formatting -->
         <hr />
     </header>
 
@@ -35,36 +27,46 @@
         <div class="grid-container">
             <div class="grid-item">
                 <h3 class="grid-title">Item Name</h3>
-                <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
-                <input type="text" id="name" name="item name" placeholder="Enter item name here" />
-                <button type="submit">Submit</button>
+                <input type="text" id="item-name" placeholder="Enter item name here" />
             </div>
 
             <div class="grid-item">
                 <h3 class="grid-title">Quantity</h3>
-                <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
-                <input type="text" id="name" name="quantity" placeholder="Enter quantity of item here" />
-                <button type="submit">Submit</button>
+                <input type="text" id="quantity" placeholder="Enter quantity of item here" />
             </div>
 
             <div class="grid-item">
                 <h3 class="grid-title">Price</h3>
-                <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
-                <input type="text" id="name" name="cost" placeholder="Enter individual cost here" />
-                <button type="submit">Submit</button>
+                <input type="text" id="price" placeholder="Enter individual cost here" />
             </div>
         </div>
+        <button class="btn btn-primary" id="submit-button" onclick="submitForm()">Submit</button>
     </main>
 
     <footer>
         <hr />
-        <!-- <span> is used here to override any modifications that would otherwise 
-            be applied to Author Name(s) as a footer text-->
         <span class="text-reset">Jordan Strong</span>
         <br />
         <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
     </footer>
-    <script src="list.js"></script>
+
+    <script src="app.js"></script>
+    <script>
+        const appInstance = new App();
+        appInstance.getPlayerName();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const submitButton = document.getElementById("submit-button");
+            submitButton.addEventListener("click", function () {
+                const itemName = document.getElementById("item-name").value;
+                const quantity = document.getElementById("quantity").value;
+                const price = document.getElementById("price").value;
+
+                appInstance.submitForm(itemName, quantity, price);
+            });
+        });
+    </script>
 </body>
 
 </html>

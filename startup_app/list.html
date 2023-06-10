@@ -1,80 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
-        <meta charset="UTF-8"/>
-        <!-- Take control of viewport scaling from websites auto settings-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> Prept </title>
-    </head>
+    <meta charset="UTF-8" />
+    <!-- Take control of viewport scaling from websites auto settings-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prept</title>
+</head>
 
+<body>
+    <header>
+        <div class="image">
+            <h1>Prept</h1>
+        </div>
+        <div class="players">
+            User: <span class="player-name"></span>
+        </div>
+        <nav>
+            <menu>
+                <button><a href="add.html">Add Item</a></button>
+                <button><a href="index.html">Logout</a></button>
+            </menu>
+        </nav>
+        <hr />
+    </header>
 
-    <body>
-        <!-- In this section, use header, main, and footer elements to give semantic structure-->
-        <header>
-            <!-- I want this to be displayed as a banner image-->
-            <div class="image">
-                <h1>Prept</h1>
-            </div>
-            <div class="players">
-                User: <!-- getUSername function-->
-                <span class="player-name"></span>
-            </div>    
-            <!-- Nav elements-->
-            <nav>
-                <!-- menu is a semantic alternative to <ul> that represents an interaction -->
-                <menu>
-                    <button><a href="add.html">Add Item</a></button>
-                    <button><a href="index.html">Logout </a></button>
-                </menu>        
-            </nav>
-
-            <!-- This next section is old style HTML to give visual formatting -->
-            <hr />
-        </header>
-
-        <main>
-            <div class="grid-container">
-                <div class="grid-item">
-                  <h3 class="grid-title">Item Name</h3>
-                  <p class="grid-content">Item 1</p>
-                  <p class="grid-content">Item 2</p>
-                  <p class="grid-content">Item 3</p>
-                </div>
-                <div class="grid-item">
-                  <h3 class="grid-title">Quantity</h3>
-                  <p class="grid-content">2</p>
-                  <p class="grid-content">6</p>
-                  <p class="grid-content">5</p>
-                </div>
-                <div class="grid-item">
-                  <h3 class="grid-title">Price</h3>
-                  <p class="grid-content">10.99</p>
-                  <p class="grid-content">7.99</p>
-                  <p class="grid-content">4.99</p>
-                </div>
+    <main>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3 class="grid-title">Item Name</h3>
+                <ul id="item-name-list"></ul>
               </div>
-              
-              <p>Total Number of Items: <span id="total-items"></span></p>
-              <p>Total Price: $<span id="total-price"></span></p>
-            </div>  
-        </main>
+              <div class="grid-item">
+                <h3 class="grid-title">Quantity</h3>
+                <ul id="quantity-list"></ul>
+              </div>
+              <div class="grid-item">
+                <h3 class="grid-title">Price</h3>
+                <ul id="price-list"></ul>
+              </div>              
+        </div>
 
-        <footer>
-            <hr />
-            <!-- <span> is used here to override any modifications that would otherwise 
-                be applied to Author Name(s) as a footer text-->
-            <span class="text-reset">Jordan Strong</span>
-            <br />    
-            <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
-        </footer>
-    
-        <script src="list.js"></script>
-    </body>    
-    
+        <p>Total Number of Items: <span id="total-items"></span></p>
+        <p>Total Price: $<span id="total-price"></span></p>
+    </main>
+
+    <footer>
+        <hr />
+        <span class="text-reset">Jordan Strong</span>
+        <br />
+        <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        const appInstance = new App();
+        appInstance.getPlayerName();
+        appInstance.renderItemList();
+    </script>
+</body>
+
 </html>
