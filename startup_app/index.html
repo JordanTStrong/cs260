@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8"/>
     <!-- Take control of viewport scaling from websites auto settings-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Prept </title>
+    
 </head>
-
-<script>
-    // when the form is submitted
-    document.querySelector("form").addEventListener("submit", function(event) {
-        // prevent the form from being submitted
-        event.preventDefault();
-
-        // get the username from the input field
-        var username = document.querySelector("input[name='username']").value;
-
-        // store the username in localStorage
-        localStorage.setItem("username", username);
-    });
-</script>
 
 <body>
     <main>
@@ -29,9 +17,11 @@
         <form method="get" action="list.html">
             <label for="name">Username</label>
             <!--The inclusion of name="username" should allow me to display it in the list.html via JS-->
-            <input type="text" id="name" name="username" color="black" placeholder="Enter username here" />
-            <button type="submit">Login</button>
         </form>
+        <div>
+            <input type="text" id="name" placeholder="Enter username here" />
+            <button class="btn btn-primary" onclick="login()">Login</button>   
+        </div>
 
         <p>
             <link rel="stylesheet" href="path/to/your/cssfile.css">
@@ -42,9 +32,10 @@
         <hr />
         <!-- <span> is used here to override any modifications that would otherwise 
             be applied to Author Name(s) as a footer text-->
-        <span class="text-reset">Author Name(s)</span>
+        <span class="text-reset">Jordan Strong</span>
         <br />    
         <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
     </footer>
+    <script src="login.js"></script>
 </body>    
 </html>

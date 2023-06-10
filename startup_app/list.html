@@ -21,7 +21,10 @@
             <div class="image">
                 <h1>Prept</h1>
             </div>
-            <h2>Username here</h2>
+            <div class="players">
+                User: <!-- getUSername function-->
+                <span class="player-name"></span>
+            </div>    
             <!-- Nav elements-->
             <nav>
                 <!-- menu is a semantic alternative to <ul> that represents an interaction -->
@@ -66,38 +69,12 @@
             <hr />
             <!-- <span> is used here to override any modifications that would otherwise 
                 be applied to Author Name(s) as a footer text-->
-            <span class="text-reset">Author Name(s)</span>
+            <span class="text-reset">Jordan Strong</span>
             <br />    
             <a href="https://github.com/JordanTStrong/startup/tree/main">GitHub</a>
         </footer>
-
-    <script>
-        // get the username from localStorage
-        var username = localStorage.getItem("username");
     
-        // set the username in the h2 tag
-        document.querySelector("h2").textContent = username;
-    
-        // get the groceries from localStorage
-        var groceries = JSON.parse(localStorage.getItem("groceries")) || [];
-    
-        // update the DOM with the groceries
-        groceries.forEach(function(grocery) {
-            // find the corresponding grid-item
-            var gridItem = document.querySelector(".grid-item." + grocery.name);
-    
-            // if the gridItem doesn't exist, create it
-            if (!gridItem) {
-                gridItem = document.createElement("div");
-                gridItem.classList.add("grid-item");
-                gridItem.classList.add(grocery.name);
-                document.querySelector(".grid-container").appendChild(gridItem);
-            }
-    
-            // set the content of the gridItem
-            gridItem.innerHTML = "<h3 class='grid-title'>" + grocery.name + "</h3><p class='grid-content'>" + grocery.quantity + "</p><p class='grid-content'>" + grocery.price + "</p>";
-        });
-    </script>
-    
+        <script src="list.js"></script>
     </body>    
+    
 </html>
